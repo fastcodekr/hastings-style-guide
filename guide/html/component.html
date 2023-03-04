@@ -1,0 +1,1110 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="format-detection" content="telephone=no">
+	<title>컴포넌트 라이브러리 | 라이브러리</title>
+	<link rel="stylesheet" type="text/css" href="../../dist/css/font.css" />
+	<link rel="stylesheet" type="text/css" href="../../dist/css/style.css">
+	<script src="../../dist/js/jquery.min.js"></script>
+	<style>
+		* {
+			font-family: 'Noto Sans KR', '맑은 고딕', '돋움', sans-serif !important
+		}
+
+		body {
+			background: #fff
+		}
+
+		.example .table a:link {
+			text-decoration: underline !important
+		}
+	</style>
+	<script>
+		$(document).ready(function () {
+			$('.menu-tbl .dep2 li a').on('click', function () {
+				tblW();
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<div id="u_skip">
+			<a href="#containers">본문 바로가기</a>
+		</div>
+		<!-- header -->
+		<!-- containers -->
+		<div id="containers">
+			<!-- snb -->
+			<div id="snb" style="top: 150px">
+				<h2>Component</h2>
+				<ul class="inner">
+					<li class="selected">
+						<div><a href="#contents1">Form</a></div>
+					</li>
+					<li>
+						<div><a href="#contents2">Serach-box</a></div>
+					</li>
+					<li>
+						<div><a href="#contents3">Typo</a></div>
+					</li>
+					<li>
+						<div><a href="#contents4">Button</a></div>
+					</li>
+					<li>
+						<div><a href="#contents5">Paging</a></div>
+					</li>
+					<li>
+						<div><a href="#contents6">Modal</a></div>
+					</li>
+					<li class="menu-tbl">
+						<div><a href="#contents7">Table</a></div>
+						<ul class="dep2">
+							<li><a href="#a">1.1 Table-basic</a></li>
+							<li><a href="#a">1.2 Table-fix-header</a></li>
+							<li><a href="#a">1.3 Table tbl-typeA</a></li>
+						</ul>
+					</li>
+					<li class="">
+						<div><a href="#contents8">Loading</a></div>
+					</li>
+				</ul>
+			</div>
+			<!--// snb -->
+
+
+
+
+			<!-- content1 -->
+			<div id="contents1" class="contents" style="display: block">
+				<div class="contField1 contField">
+					<h2 class="tit">Form</h2>
+					<div class="common_box">input</div>
+					<div class="example">
+						<div class="form-wrap">
+							<label for="txt1">label</label>
+							<input type="text" id="txt1" placeholder="placeholder" class="form-control">
+						</div>
+						<div class="form-wrap">
+							<label for="txt2">label</label>
+							<input type="text" id="txt2" placeholder="placeholder" class="form-control error">
+						</div>
+						<div class="form-wrap">
+							<label for="txt3">label</label>
+							<input type="text" id="txt3" placeholder="placeholder" class="form-control" readonly>
+						</div>
+						<div class="form-wrap">
+							<label for="txt4">label</label>
+							<input type="text" id="txt4" placeholder="placeholder" class="form-control" disabled>
+						</div>
+					</div>
+					<div class="syntax_wrap">
+						<pre class="brush: html;">
+							<div class="form-wrap">
+								<label for="txt1">label</label>
+								<input type="text" id="txt1" placeholder="placeholder" class="form-control">
+							</div>
+							<div class="form-wrap">
+								<label for="txt2">label</label>
+								<input type="text" id="txt2" placeholder="placeholder" class="form-control error">
+							</div>
+							<div class="form-wrap">
+								<label for="txt3">label</label>
+								<input type="text" id="txt3" placeholder="placeholder" class="form-control" readonly>
+							</div>
+							<div class="form-wrap">
+								<label for="txt4">label</label>
+								<input type="text" id="txt4" placeholder="placeholder" class="form-control" disabled>
+							</div>
+						</pre>
+					</div>
+
+					<div class="common_box">textarea</div>
+					<div class="example">
+						<div class="form-wrap">
+							<label for="txtarea1">label</label>
+							<textarea id="txtarea1" placeholder="placeholder" class="form-control" rows="4"></textarea>
+						</div>
+						<div class="form-wrap">
+							<label for="txtarea2">label</label>
+							<textarea id="txtarea2" placeholder="placeholder" class="form-control error" rows="4">textarea</textarea>
+						</div>
+						<div class="form-wrap">
+							<label for="txtarea3">label</label>
+							<textarea id="txtarea3" placeholder="placeholder" class="form-control" readonly
+								rows="4">textarea</textarea>
+						</div>
+						<div class="form-wrap">
+							<label for="txtarea4">label</label>
+							<textarea id="txtarea4" placeholder="placeholder" class="form-control" disabled
+								rows="4">textarea</textarea>
+						</div>
+					</div>
+					<div class="syntax_wrap">
+						<pre class="brush: html;">
+							<div class="form-wrap">
+								<label for="txtarea1">label</label>
+								<textarea id="txtarea1" placeholder="placeholder" class="form-control"></textarea>
+							</div>
+							<div class="form-wrap">
+								<label for="txtarea2">label</label>
+								<textarea id="txtarea2" placeholder="placeholder" class="form-control error">textarea</textarea>
+							</div>
+							<div class="form-wrap">
+								<label for="txtarea3">label</label>
+								<textarea id="txtarea3" placeholder="placeholder" class="form-control" readonly>textarea</textarea>
+							</div>
+							<div class="form-wrap">
+								<label for="txtarea4">label</label>
+								<textarea id="txtarea4" placeholder="placeholder" class="form-control" disabled>textarea</textarea>
+							</div>
+						</pre>
+					</div>
+
+					<div class="common_box">checkbox</div>
+					<div class="example">
+						<div class="check-wrap">
+							<span class="checkbox">
+								<input type="checkbox" id="login-chk">
+								<label for="login-chk">자동 로그인</label>
+							</span>
+							<span class="checkbox">
+								<input type="checkbox" id="login-chk2" checked>
+								<label for="login-chk2">자동 로그인</label>
+							</span>
+							<span class="checkbox">
+								<input type="checkbox" id="login-chk3" disabled>
+								<label for="login-chk3">자동 로그인</label>
+							</span>
+							<span class="checkbox nolabel">
+								<input type="checkbox" id="login-chk4" disabled>
+								<label for="login-chk4">자동 로그인</label>
+							</span>
+						</div>
+					</div>
+					<div class="syntax_wrap">
+						<pre class="brush: html;">
+							<div class="check-wrap">
+								<span class="checkbox">
+									<input type="checkbox" id="login-chk">
+									<label for="login-chk">자동 로그인</label>
+								</span>
+
+								<span class="checkbox">
+									<input type="checkbox" id="login-chk2" checked>
+									<label for="login-chk2">자동 로그인</label>
+								</span>
+
+								<span class="checkbox">
+									<input type="checkbox" id="login-chk3" disabled>
+									<label for="login-chk3">자동 로그인</label>
+								</span>
+
+								<span class="checkbox nolabel">
+									<input type="checkbox" id="login-chk4" disabled>
+									<label for="login-chk4">자동 로그인</label>
+								</span>
+							</div>
+						</pre>
+					</div>
+					<div class="common_box">radio</div>
+					<div class="example">
+						<div class="radio-wrap">
+							<span class="radio">
+								<input type="radio" id="login-chk">
+								<label for="login-chk">자동 로그인</label>
+							</span>
+							<span class="radio">
+								<input type="radio" id="login-chk2" checked>
+								<label for="login-chk2">자동 로그인</label>
+							</span>
+							<span class="radio">
+								<input type="radio" id="login-chk3" disabled>
+								<label for="login-chk3">자동 로그인</label>
+							</span>
+							<span class="radio nolabel">
+								<input type="radio" id="login-chk4" disabled>
+								<label for="login-chk4">자동 로그인</label>
+							</span>
+						</div>
+					</div>
+					<div class="syntax_wrap">
+						<pre class="brush: html;">
+<div class="radio-wrap">
+	<span class="radio">
+		<input type="radio" id="login-chk">
+		<label for="login-chk">자동 로그인</label>
+	</span>
+	<span class="radio">
+		<input type="radio" id="login-chk2" checked>
+		<label for="login-chk2">자동 로그인</label>
+	</span>
+	<span class="radio">
+		<input type="radio" id="login-chk3" disabled>
+		<label for="login-chk3">자동 로그인</label>
+	</span>
+	<span class="radio nolabel">
+		<input type="radio" id="login-chk4" disabled>
+		<label for="login-chk4">자동 로그인</label>
+	</span>
+</div>
+						</pre>
+					</div>
+				</div>
+			</div>
+			<!--// content1 -->
+
+			<div id="contents2" class="contents">
+				<div class="contField1 contField">
+					<h2 class="tit">search-box</h2>
+					<div class="common_box">search-box</div>
+					<div class="example" style="width: 1280px">
+						<div class="search-box">
+							<ul class="form-group">
+								<li>
+									<label>사용자명</label>
+									<input type="text" class="form-control" style="width: 210px">
+									<button class="btn btn-search">검색</button>
+									<a href="#" class="btn btn-primary">Search</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="syntax_wrap">
+						<pre class="brush: html;">
+                        <div class="search-box">
+                            <ul class="form-group">
+                                <li>
+                                    <label>사용자명</label>
+                                    <input type="text" class="form-control" style="width: 210px">
+                                    <button class="btn btn-search">검색</button>
+                                    <a href="#"  class="btn btn-primary">Search</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </pre>
+					</div>
+				</div>
+			</div>
+
+			<!-- content3 -->
+			<div id="contents3" class="contents">
+				<div class="contField1 contField">
+					<h2 class="tit">Typo</h2>
+					<div class="common_box">폰트 컬러</div>
+					<div class="example">
+						<strong class="text-primary">1,000 명</strong>
+						<br>
+						<br>
+					</div>
+					<div class="syntax_wrap">
+						<pre class="brush: html;">
+                        <strong class="text-primary">1,000 명</strong>
+                    </pre>
+					</div>
+
+					<div class="common_box">페이지 타이틀</div>
+					<div class="example">
+						<div class="ribbon">
+							<h1 class="title">
+								디지털키 현황
+							</h1>
+						</div>
+					</div>
+					<div class="syntax_wrap">
+						<pre class="brush: html;">
+                        <div class="ribbon">
+                            <h1 class="title">
+                                디지털키 현황
+                            </h1>
+                        </div>
+                    </pre>
+					</div>
+
+					<div class="common_box">페이지 서브 타이틀</div>
+					<div class="example">
+						<h2 class="row-title">
+							디지털키 현황
+						</h2>
+					</div>
+					<div class="syntax_wrap">
+						<pre class="brush: html;">
+                        <h2 class="row-title">
+                            디지털키 현황
+                        </h2>
+                    </pre>
+					</div>
+				</div>
+			</div>
+			<!--// content3 -->
+
+			<!-- content4 -->
+			<div id="contents4" class="contents">
+				<div class="contField1 contField">
+					<h2 class="tit">Button</h2>
+					<div class="common_box">2.1 Color</div>
+					<div class="example">
+						<button type="button" class="btn default sm outlined">초기화</button>
+						<button type="button" class="btn primary sm outlined">초기화</button>
+						<button type="button" class="btn secondary sm outlined">초기화</button>
+						<br><br>
+						<button type="button" class="btn gray sm contained">초기화</button>
+						<button type="button" class="btn primary sm contained">초기화</button>
+						<button type="button" class="btn secondary sm contained">초기화</button>
+					</div>
+					<div class="syntax_wrap">
+						<pre class="brush: html;">
+							<button type="button" class="btn default sm outlined">초기화</button>
+							<button type="button" class="btn primary sm outlined">초기화</button>
+							<button type="button" class="btn secondary sm outlined">초기화</button>
+							<br><br>
+							<button type="button" class="btn gray sm contained">초기화</button>
+							<button type="button" class="btn primary sm contained">초기화</button>
+							<button type="button" class="btn secondary sm contained">초기화</button>
+            </pre>
+					</div>
+					<div class="common_box">2.2 Size</div>
+					<div class="example">
+	<p style="font-size: 14px;">btn (height)</p><br>
+	<button type="button" class="btn default xs outlined">xs: 24px</button>
+	<button type="button" class="btn default sm outlined">sm: 32px</button>
+	<button type="button" class="btn default md outlined">md: 40px</button>
+	<button type="button" class="btn default lg outlined">lg: 56px</button>
+					</div>
+					<div class="syntax_wrap">
+						<pre class="brush: html;">
+	<button type="button" class="btn default xs outlined">xs: 24px</button>
+	<button type="button" class="btn default sm outlined">sm: 32px</button>
+	<button type="button" class="btn default md outlined">md: 40px</button>
+	<button type="button" class="btn default lg outlined">lg: 56px</button>
+						</pre>
+					</div>
+				</div>
+			</div>
+			<!--// content4 -->
+
+			<!-- content5 -->
+			<div id="contents5" class="contents">
+				<div class="contField1 contField">
+					<h2 class="tit">Paging</h2>
+					<div class="common_box">페이징</div>
+					<div class="example">
+						<div class="paginate">
+							<button type="button" disabled class="btn_first">처음 페이지</button>
+							<button type="button" disabled class="btn_prev">이전 페이지</button>
+							<span class="page_num">
+								<button type="button" class="active">1</button>
+								<button type="button">2</button>
+								<button type="button">3</button>
+								<button type="button">4</button>
+								<button type="button">5</button>
+								<button type="button">6</button>
+								<button type="button">7</button>
+								<button type="button">8</button>
+								<button type="button">9</button>
+							</span>
+							<button type="button" class="btn_next">다음 페이지</button>
+							<button type="button" class="btn_last">마지막 페이지</button>
+						</div>
+					</div>
+					<div class="syntax_wrap">
+						<pre class="brush: html;">
+			<div class="paginate">
+				<button type="button" disabled class="btn_first">처음 페이지</button>
+				<button type="button" disabled class="btn_prev">이전 페이지</button>
+				<span class="page_num">
+					<button type="button" class="active">1</button>
+					<button type="button">2</button>
+					<button type="button">3</button>
+					<button type="button">4</button>
+					<button type="button">5</button>
+					<button type="button">6</button>
+					<button type="button">7</button>
+					<button type="button">8</button>
+					<button type="button">9</button>
+				</span>
+				<button type="button" class="btn_next">다음 페이지</button>
+				<button type="button" class="btn_last">마지막 페이지</button>
+			</div>
+            </pre>
+					</div>
+				</div>
+			</div>
+			<!--// content5 -->
+
+			<!-- content6 -->
+			<div id="contents6" class="contents">
+				<div class="contField1 contField">
+					<h2 class="tit">Modal-popup</h2>
+					<div class="common_box">Modal</div>
+					<div class="example">
+						<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#popmessage">모달팝업</button>
+					</div>
+					<div class="syntax_wrap">
+						<pre class="brush: html;">
+                        &lt;button type="button" class="btn btn-primary" data-toggle="modal" data-target="#popmessage"&gt;모달팝업&lt;/button&gt;
+                        <!-- Modal -->
+                        <div class="modal fade" id="popmessage" tabindex="-1" role="dialog" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">타이틀</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span class="sr-only" aria-hidden="true">close</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <div class="msg">
+                                            <div class="text-center">
+                                                내용이 들어옵니다
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary">확인</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--// modal -->
+                    </pre>
+					</div>
+				</div>
+			</div>
+			<!--// content6 -->
+
+			<!-- content7 -->
+			<div id="contents7" class="contents">
+				<div class="contField1 contField">
+					<h2 class="tit">Table</h2>
+					<div class="common_box">Table-basic</div>
+					<div class="example" style="width: 1200px">
+						<div class="table-responsive table-wrap">
+							<table class="table" style="min-width: 800px">
+								<colgroup>
+									<col style="width: 8%">
+									<col style="width: auto">
+									<col style="width: 7%">
+									<col style="width: 7%">
+									<col style="width: 8%">
+									<col style="width: 8%">
+									<col style="width: 8%">
+								</colgroup>
+								<thead>
+									<tr>
+										<th>Client</th>
+										<th>Network</th>
+										<th>WAS/DB</th>
+										<th>소계</th>
+										<th>초과</th>
+										<th>초과%</th>
+										<th>오류</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>A0001</td>
+										<td class="tal">GBI_생기</td>
+										<td>0</td>
+										<td>9,239</td>
+										<td>3.26</td>
+										<td>5.27</td>
+										<td>3.26</td>
+									</tr>
+									<tr>
+										<td>A0002</td>
+										<td class="tal">TMS 모니터링 시스템</td>
+										<td>0</td>
+										<td>9,891</td>
+										<td>3.09</td>
+										<td>4.71</td>
+										<td>3.09</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="syntax_wrap">
+						<pre class="brush: html;">
+							<div class="table-responsive table-wrap">
+								<table class="table">
+									<colgroup>
+										<col style="width: 8%">
+										<col style="width: auto">
+										<col style="width: 7%">
+										<col style="width: 7%">
+										<col style="width: 8%">
+										<col style="width: 8%">
+										<col style="width: 8%">
+										<col style="width: 8%">
+									</colgroup>
+									<thead>
+										<tr>
+											<th>Client</th>
+											<th>Network</th>
+											<th>WAS/DB</th>
+											<th>소계</th>
+											<th>초과</th>
+											<th>초과%</th>
+											<th>오류</th>
+											<th>오류%</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>A0001</td>
+											<td class="tal">GBI_생기</td>
+											<td>0</td>
+											<td>9,239</td>
+											<td>3.26</td>
+											<td>5.27</td>
+											<td>3.26</td>
+											<td>11.79</td>
+										</tr>
+										<tr>
+											<td>A0002</td>
+											<td class="tal">TMS 모니터링 시스템</td>
+											<td>0</td>
+											<td>9,891</td>
+											<td>3.09</td>
+											<td>4.71</td>
+											<td>3.09</td>
+											<td>10.89</td>
+										</tr>
+									</tbody>
+								</table>
+						</div>
+					</pre>
+					</div>
+				</div>
+				<div class="contField2 contField">
+					<h2 class="tit">Table</h2>
+					<div class="common_box">Table-fix-header</div>
+					<div class="example" style="width: 1200px">
+						<div class="table-responsive table-wrap">
+							<div class="thead-wrap">
+								<table class="table" style="min-width: 800px">
+									<colgroup>
+										<col style="width: 65px">
+										<col style="width: 400px">
+										<col style="width: 230px">
+									</colgroup>
+									<thead>
+										<tr>
+											<th>NO</th>
+											<th>구분</th>
+											<th>처리일자</th>
+										</tr>
+									</thead>
+								</table>
+							</div>
+							<div class="slimscroll">
+								<div class="tbody-wrap">
+									<table class="table" style="min-width: 800px">
+										<colgroup>
+											<col style="width: 65px">
+											<col style="width: 400px">
+											<col style="width: 230px">
+										</colgroup>
+										<tbody>
+											<tr>
+												<td>1</td>
+												<td class="tal">디지털키 공유요청등록</td>
+												<td>2018-02-15 11:45:10</td>
+											</tr>
+											<tr>
+												<td>2</td>
+												<td class="tal">요청키 승인</td>
+												<td>2018-02-15 11:45:10</td>
+											</tr>
+											<tr>
+												<td>3</td>
+												<td class="tal">디지털키 공유 진행</td>
+												<td>2018-02-15 11:45:10</td>
+											</tr>
+											<tr>
+												<td>4</td>
+												<td class="tal">공유 승인 SMS 발송</td>
+												<td>2018-02-15 11:45:10</td>
+											</tr>
+											<tr>
+												<td>5</td>
+												<td class="tal">디지털키 발급완료</td>
+												<td>2018-02-15 11:45:10</td>
+											</tr>
+											<tr>
+												<td>6</td>
+												<td class="tal">디지털키 공유 삭제요청</td>
+												<td>2018-02-15 11:45:10</td>
+											</tr>
+											<tr>
+												<td>7</td>
+												<td class="tal">디지털키 공유 삭제요청</td>
+												<td>2018-02-15 11:45:10</td>
+											</tr>
+											<tr>
+												<td>8</td>
+												<td class="tal">디지털키 공유 삭제요청</td>
+												<td>2018-02-15 11:45:10</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<script>
+								$(document).ready(function () {
+									$('.slimscroll').slimscroll({
+										height: 200
+									});
+								});
+							</script>
+						</div>
+					</div>
+					<div class="syntax_wrap">
+						<pre class="brush: html;">
+							// thead와 tbody의 colgroup을 원하는 사이즈의 pixel로 써준다.
+
+							<div class="table-responsive table-wrap">
+								<div class="thead-wrap">
+									<table class="table">
+										<colgroup>
+											<col style="width: 65px">
+											<col style="width: 400px">
+											<col style="width: 230px">
+										</colgroup>
+										<thead>
+											<tr>
+												<th>NO</th>
+												<th>구분</th>
+												<th>처리일자</th>
+											</tr>
+										</thead>
+									</table>
+								</div>
+								&lt;div class="slimscroll"&gt;
+									<div class="tbody-wrap">
+										<table class="table">
+											<colgroup>
+												<col style="width: 65px">
+												<col style="width: 400px">
+												<col style="width: 230px">
+											</colgroup>
+											<tbody>
+												<tr>
+													<td>1</td>
+													<td class="tal">디지털키 공유요청등록</td>
+													<td>2018-02-15 11:45:10</td>
+												</tr>
+												<tr>
+													<td>2</td>
+													<td class="tal">요청키 승인</td>
+													<td>2018-02-15 11:45:10</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								&lt;/div&gt;
+							</div>
+							&lt;script&gt;
+							$(document).ready(function(){
+									$('.slimscroll').slimscroll({
+											height: 200
+									});
+							});
+							&lt;/script&gt;
+					</pre>
+					</div>
+				</div>
+
+				<div class="contField3 contField">
+					<h2 class="tit">Table</h2>
+					<div class="common_box">Table tbl-typeA</div>
+					<div class="example">
+						<div class="table-wrap">
+							<table class="table tbl-typeA" style="width: auto">
+								<colgroup>
+									<col style="width: 130px">
+									<col style="width: 240px">
+									<col style="width: 130px">
+									<col style="width: 240px">
+								</colgroup>
+								<tbody>
+									<tr>
+										<th>VIN NO</th>
+										<td>KMHEM42APX000298</td>
+										<th>디지털ID</th>
+										<td>abcdef12345</td>
+									</tr>
+									<tr>
+										<th>차량명</th>
+										<td>소나타</td>
+										<th>사용자명</th>
+										<td>이명철</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+					</div>
+					<div class="syntax_wrap">
+						<pre class="brush: html;">
+							<div class="table-wrap">
+								<table class="table tbl-typeA">
+									<colgroup>
+										<col style="width: 130px">
+										<col style="width: 240px">
+										<col style="width: 130px">
+										<col style="width: 240px">
+									</colgroup>
+									<tbody>
+										<tr>
+											<th>VIN NO</th>
+											<td>KMHEM42APX000298</td>
+											<th>디지털ID</th>
+											<td>abcdef12345</td>
+										</tr>
+										<tr>
+											<th>차량명</th>
+											<td>소나타</td>
+											<th>사용자명</th>
+											<td>이명철</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</pre>
+					</div>
+				</div>
+				<!--// content7 -->
+			</div>
+			<!--// content7 -->
+
+			<!-- content8 -->
+			<div id="contents8" class="contents">
+				<div class="contField1 contField">
+					<h2 class="tit">Loading</h2>
+
+					<div class="common_box">Loading</div>
+					<div class="example">
+
+						<div class="loadme-wrap">
+							<!-- 로딩 -->
+							<div class="loadme">
+								<div class="loadme-fadingCircle">
+									<div class="loadme-fadingCircle-child1 loadme-fadingCircle-child"></div>
+									<div class="loadme-fadingCircle-child2 loadme-fadingCircle-child"></div>
+									<div class="loadme-fadingCircle-child3 loadme-fadingCircle-child"></div>
+									<div class="loadme-fadingCircle-child4 loadme-fadingCircle-child"></div>
+									<div class="loadme-fadingCircle-child5 loadme-fadingCircle-child"></div>
+									<div class="loadme-fadingCircle-child6 loadme-fadingCircle-child"></div>
+									<div class="loadme-fadingCircle-child7 loadme-fadingCircle-child"></div>
+									<div class="loadme-fadingCircle-child8 loadme-fadingCircle-child"></div>
+									<div class="loadme-fadingCircle-child9 loadme-fadingCircle-child"></div>
+									<div class="loadme-fadingCircle-child10 loadme-fadingCircle-child"></div>
+									<div class="loadme-fadingCircle-child11 loadme-fadingCircle-child"></div>
+									<div class="loadme-fadingCircle-child12 loadme-fadingCircle-child"></div>
+								</div>
+								<div class="loadme-mask"></div>
+							</div>
+							<!-- //로딩 -->
+						</div>
+
+					</div>
+					<div class="syntax_wrap">
+						<pre class="brush: html;">
+
+                        <div class="loadme-wrap">
+                            //로딩이미지 위치가 제대로 나오지 않을 경우 - 로딩을 감싸고있는 태그에 loadme-wrap 클래스 추가
+
+                            <!-- 로딩 -->
+                            <div class="loadme">
+                                <div class="loadme-fadingCircle">
+                                    <div class="loadme-fadingCircle-child1 loadme-fadingCircle-child"></div>
+                                    <div class="loadme-fadingCircle-child2 loadme-fadingCircle-child"></div>
+                                    <div class="loadme-fadingCircle-child3 loadme-fadingCircle-child"></div>
+                                    <div class="loadme-fadingCircle-child4 loadme-fadingCircle-child"></div>
+                                    <div class="loadme-fadingCircle-child5 loadme-fadingCircle-child"></div>
+                                    <div class="loadme-fadingCircle-child6 loadme-fadingCircle-child"></div>
+                                    <div class="loadme-fadingCircle-child7 loadme-fadingCircle-child"></div>
+                                    <div class="loadme-fadingCircle-child8 loadme-fadingCircle-child"></div>
+                                    <div class="loadme-fadingCircle-child9 loadme-fadingCircle-child"></div>
+                                    <div class="loadme-fadingCircle-child10 loadme-fadingCircle-child"></div>
+                                    <div class="loadme-fadingCircle-child11 loadme-fadingCircle-child"></div>
+                                    <div class="loadme-fadingCircle-child12 loadme-fadingCircle-child"></div>
+                                </div>
+                                <div class="loadme-mask"></div>
+                            </div>
+                            <!-- //로딩 -->
+
+                        </div>
+
+                    </pre>
+					</div>
+
+					<div class="common_box">테이블위치에 있는 Loading</div>
+					<div class="example">
+
+						<div class="row loadme-wrap">
+
+							<!-- 컨텐츠 -->
+							<div class="table-responsive table-wrap">
+								<div class="thead-wrap">
+									<table class="table">
+										<colgroup>
+											<col style="width: 90px">
+											<col style="width: 100px">
+											<col style="width: 200px">
+											<col style="width: 180px">
+											<col style="width: 300px">
+											<col style="width: 120px">
+											<col style="width: 120px">
+											<col style="width: 120px">
+											<col style="width: 120px">
+											<col style="width: 120px">
+											<col style="width: 120px">
+										</colgroup>
+										<thead>
+											<tr>
+												<th>선택</th>
+												<th>코드</th>
+												<th>정보시스템</th>
+												<th>ADM담당팀</th>
+												<th>대표URL</th>
+												<th>담당자</th>
+												<th>승인요청일</th>
+												<th>승인여부</th>
+												<th>담당자</th>
+												<th>승인요청일</th>
+												<th>승인여부</th>
+											</tr>
+										</thead>
+									</table>
+								</div>
+								<div class="slimscroll">
+									<div class="tbody-wrap">
+										<table class="table">
+											<colgroup>
+												<col style="width: 90px">
+												<col style="width: 100px">
+												<col style="width: 200px">
+												<col style="width: 180px">
+												<col style="width: 300px">
+												<col style="width: 120px">
+												<col style="width: 120px">
+												<col style="width: 120px">
+												<col style="width: 120px">
+												<col style="width: 120px">
+												<col style="width: 120px">
+											</colgroup>
+											<tbody>
+												<tr>
+													<td>
+														<span class="checkbox nolabel">
+															<input type="checkbox" id="chk1" name="chk1">
+															<label for="chk1">선택</label>
+														</span>
+													</td>
+													<td>01100</td>
+													<td class="tal">GBI 생기</td>
+													<td class="tal">경영정보시스템팀</td>
+													<td class="tal">http://cm.autoever.com;8091</td>
+													<td>홍길도</td>
+													<td>2018.12.15</td>
+													<td>Y</td>
+													<td>홍길도</td>
+													<td>2018.12.15</td>
+													<td>Y</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>
+							</div>
+							<!-- //컨텐츠 -->
+
+							<!-- 로딩 -->
+							<div class="loadme">
+								<div class="loadme-fadingCircle">
+									<div class="loadme-fadingCircle-child1 loadme-fadingCircle-child"></div>
+									<div class="loadme-fadingCircle-child2 loadme-fadingCircle-child"></div>
+									<div class="loadme-fadingCircle-child3 loadme-fadingCircle-child"></div>
+									<div class="loadme-fadingCircle-child4 loadme-fadingCircle-child"></div>
+									<div class="loadme-fadingCircle-child5 loadme-fadingCircle-child"></div>
+									<div class="loadme-fadingCircle-child6 loadme-fadingCircle-child"></div>
+									<div class="loadme-fadingCircle-child7 loadme-fadingCircle-child"></div>
+									<div class="loadme-fadingCircle-child8 loadme-fadingCircle-child"></div>
+									<div class="loadme-fadingCircle-child9 loadme-fadingCircle-child"></div>
+									<div class="loadme-fadingCircle-child10 loadme-fadingCircle-child"></div>
+									<div class="loadme-fadingCircle-child11 loadme-fadingCircle-child"></div>
+									<div class="loadme-fadingCircle-child12 loadme-fadingCircle-child"></div>
+								</div>
+								<div class="loadme-mask"></div>
+							</div>
+							<!-- //로딩 -->
+
+						</div>
+
+					</div>
+					<div class="syntax_wrap">
+						<pre class="brush: html;">
+
+                        <div class="row loadme-wrap">
+                            //로딩이미지 위치가 제대로 나오지 않을 경우 - 로딩을 감싸고있는 태그에 loadme-wrap 클래스 추가
+
+                            <!-- 컨텐츠 -->
+                            <div class="table-responsive table-wrap">
+                                <div class="thead-wrap">
+                                    <table class="table">
+                                        <colgroup>
+                                            <col style="width: 90px">
+                                            <col style="width: 100px">
+                                            <col style="width: 200px">
+                                            <col style="width: 180px">
+                                            <col style="width: 300px">
+                                            <col style="width: 120px">
+                                            <col style="width: 120px">
+                                            <col style="width: 120px">
+                                            <col style="width: 120px">
+                                            <col style="width: 120px">
+                                            <col style="width: 120px">
+                                        </colgroup>
+                                        <thead>
+                                            <tr>
+                                                <th>선택</th>
+                                                <th>코드</th>
+                                                <th>정보시스템</th>
+                                                <th>ADM담당팀</th>
+                                                <th>대표URL</th>
+                                                <th>담당자</th>
+                                                <th>승인요청일</th>
+                                                <th>승인여부</th>
+                                                <th>담당자</th>
+                                                <th>승인요청일</th>
+                                                <th>승인여부</th>
+                                            </tr>
+                                        </thead>
+                                    </table>
+                                </div>
+                                <div class="slimscroll">
+                                    <div class="tbody-wrap">
+                                        <table class="table">
+                                            <colgroup>
+                                                <col style="width: 90px">
+                                                <col style="width: 100px">
+                                                <col style="width: 200px">
+                                                <col style="width: 180px">
+                                                <col style="width: 300px">
+                                                <col style="width: 120px">
+                                                <col style="width: 120px">
+                                                <col style="width: 120px">
+                                                <col style="width: 120px">
+                                                <col style="width: 120px">
+                                                <col style="width: 120px">
+                                            </colgroup>
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <span class="checkbox nolabel">
+                                                            <input type="checkbox" id="chk1" name="chk1">
+                                                            <label for="chk1">선택</label>
+                                                        </span>
+                                                    </td>
+                                                    <td>01100</td>
+                                                    <td class="tal">GBI 생기</td>
+                                                    <td class="tal">경영정보시스템팀</td>
+                                                    <td class="tal">http://cm.autoever.com;8091</td>
+                                                    <td>홍길도</td>
+                                                    <td>2018.12.15</td>
+                                                    <td>Y</td>
+                                                    <td>홍길도</td>
+                                                    <td>2018.12.15</td>
+                                                    <td>Y</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- //컨텐츠 -->
+
+                            <!-- 로딩 -->
+                            <div class="loadme">
+                                <div class="loadme-fadingCircle">
+                                    <div class="loadme-fadingCircle-child1 loadme-fadingCircle-child"></div>
+                                    <div class="loadme-fadingCircle-child2 loadme-fadingCircle-child"></div>
+                                    <div class="loadme-fadingCircle-child3 loadme-fadingCircle-child"></div>
+                                    <div class="loadme-fadingCircle-child4 loadme-fadingCircle-child"></div>
+                                    <div class="loadme-fadingCircle-child5 loadme-fadingCircle-child"></div>
+                                    <div class="loadme-fadingCircle-child6 loadme-fadingCircle-child"></div>
+                                    <div class="loadme-fadingCircle-child7 loadme-fadingCircle-child"></div>
+                                    <div class="loadme-fadingCircle-child8 loadme-fadingCircle-child"></div>
+                                    <div class="loadme-fadingCircle-child9 loadme-fadingCircle-child"></div>
+                                    <div class="loadme-fadingCircle-child10 loadme-fadingCircle-child"></div>
+                                    <div class="loadme-fadingCircle-child11 loadme-fadingCircle-child"></div>
+                                    <div class="loadme-fadingCircle-child12 loadme-fadingCircle-child"></div>
+                                </div>
+                                <div class="loadme-mask"></div>
+                            </div>
+                            <!-- //로딩 -->
+
+                        </div>
+
+                    </pre>
+					</div>
+
+				</div>
+			</div>
+			<!--// content8 -->
+
+			<a href="#" class="top">맨위로</a>
+
+		</div>
+		<!--// containers -->
+	</div>
+	<!--// wrap -->
+
+
+	<!-- Modal -->
+	<div class="modal fade" id="popmessage" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">타이틀</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span class="sr-only" aria-hidden="true">close</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="msg">
+						<div class="text-center">
+							내용이 들어옵니다
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary">확인</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--가이드 스타일-->
+	<link rel="stylesheet" type="text/css" href="../css/lib_common.css">
+	<link rel="stylesheet" type="text/css" href="../css/shCoreDefault.css" />
+	<link rel="stylesheet" type="text/css" href="../css/shThemeDefault.css" />
+	<link rel="stylesheet" type="text/css" href="../css/shCoreEclipse.css" />
+	<link rel="stylesheet" type="text/css" href="../css/shCoreEmacs.css" />
+	<script src="../js/front-ui.js"></script>
+	<script type="text/javascript" src="../js/shCore.js"></script>
+	<script type="text/javascript" src="../js/shBrushCss.js"></script>
+	<script type="text/javascript" src="../js/shBrushJScript.js"></script>
+	<script type="text/javascript" src="../js/shBrushXml.js"></script>
+	<script type="text/javascript">SyntaxHighlighter.all();</script>
+	<!--//가이드 스타일 -->
+</body>
+
+</html>
