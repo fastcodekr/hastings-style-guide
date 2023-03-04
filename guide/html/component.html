@@ -146,19 +146,21 @@
 						<pre class="brush: html;">
 							<div class="form-wrap">
 								<label for="txtarea1">label</label>
-								<textarea id="txtarea1" placeholder="placeholder" class="form-control"></textarea>
+								<textarea id="txtarea1" placeholder="placeholder" class="form-control" rows="4"></textarea>
 							</div>
 							<div class="form-wrap">
 								<label for="txtarea2">label</label>
-								<textarea id="txtarea2" placeholder="placeholder" class="form-control error">textarea</textarea>
+								<textarea id="txtarea2" placeholder="placeholder" class="form-control error" rows="4">textarea</textarea>
 							</div>
 							<div class="form-wrap">
 								<label for="txtarea3">label</label>
-								<textarea id="txtarea3" placeholder="placeholder" class="form-control" readonly>textarea</textarea>
+								<textarea id="txtarea3" placeholder="placeholder" class="form-control" readonly
+									rows="4">textarea</textarea>
 							</div>
 							<div class="form-wrap">
 								<label for="txtarea4">label</label>
-								<textarea id="txtarea4" placeholder="placeholder" class="form-control" disabled>textarea</textarea>
+								<textarea id="txtarea4" placeholder="placeholder" class="form-control" disabled
+									rows="4">textarea</textarea>
 							</div>
 						</pre>
 					</div>
@@ -789,27 +791,17 @@
 
 
 	<!-- Modal -->
-	<div class="modal fade" id="popmessage" tabindex="-1" role="dialog" aria-hidden="true">
-		<div class="modal-dialog modal-dialog-centered" role="document">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title">타이틀</h5>
-					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-						<span class="sr-only" aria-hidden="true">close</span>
-					</button>
-				</div>
-				<div class="modal-body">
-					<div class="msg">
-						<div class="text-center">
-							내용이 들어옵니다
-						</div>
-					</div>
-				</div>
-				<div class="modal-footer">
-					<button type="button" class="btn btn-primary">확인</button>
-				</div>
-			</div>
-		</div>
+	<div class="openModal modal">
+		<section>
+			<header>
+				<h2>타이틀</h2>
+				<button type="button" class="close" onClick={close}>닫기</button>
+			</header>
+			<main>{props.children}</main>
+			<footer>
+				<button type="button" class="close" onClick={close}>닫기</button>
+			</footer>
+		</section>
 	</div>
 
 	<!--가이드 스타일-->
